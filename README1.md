@@ -1,14 +1,21 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# Text Editor
 
-## Your Task
+## Siddharth Desai
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+This project covers J.A.T.E (ust another text editor). JATE is a text editor that runs in the browser. This is a single-page application that meets the PWA criteria. One important concept from this project I learned was leveraging service workers. I was able to leverage to cache static CSS, JavaScript, HTML files, images, and even API requests. This allows developers to reduce network bandwidth and improve overall load times.
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
-
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
-
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
+## Table of Contents
+1. [ User Story. ](#user_Story)
+2.  [ Acceptance Citeria. ](#acceptance_criteria)
+3.  [ Description. ](#description)
+4. [ Installation. ](#installation)
+5. [ Usage. ](#usage)
+6. [ License. ](#license)
+7. [ Screenshots. ](#screenshots)
+8. [ Questions. ](#questions)
+9.  [ Links. ](#links)
+10. [ Resources. ](#resources)
 
 ## User Story
 
@@ -48,95 +55,115 @@ WHEN I deploy to Heroku
 THEN I should have proper build scripts for a webpack application
 ```
 
-## Mock-Up
+## Installation
 
-The following animation demonstrates the application functionality:
+* Clone the repository using:
+```
+git@github.com:shd327/Text-Editor.git
+```
+* Ensure you are in the current working directory
+* Ensure all dependencies are installed as shown below installation instructions are below:
+```
+{
+    "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/runtime": "^7.15.3",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "http-server": "^0.11.1",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0",
+    "webpack-pwa-manifest": "^4.3.0",
+    "workbox-webpack-plugin": "^6.2.4"
+  },
+  "dependencies": {
+    "code-mirror-themes": "^1.0.0",
+    "idb": "^6.1.2"
+  }
+}
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+```
+Ensure the package.json in the root has the below scripts
+```
+{
+"scripts": {
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server nodemon server.js --ignore clien",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install",
+    "client": "cd client && npm start"
+  },
+}
+```
+Run the below commands to install dependencies after cloning the repo
+```
+npm i
+```
 
-The following image shows the application's `manifest.json` file:
+## Usage
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+* Ensure all depencies and above steps are fulfilled 
+* Navigate to the working directory and open a terminal and run the below command
+```
+npm run start
+```
 
-The following image shows the application's registered service worker:
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+## License
 
-The following image shows the application's IndexedDB storage:
+MIT License
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+Copyright (c) 2022 Siddharth Desai
 
-## Grading Requirements
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-This Challenge is graded based on the following criteria:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-### Technical Acceptance Criteria: 40%
+## Tests
 
-* Satisfies all of the above acceptance criteria plus the following:
+N/A
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
+## Screenshots
 
-  * The application works without an internet connection
+![image ](./Assets/.PNG)
+![image](./Assets/.PNG)
+![image](./Assets/.PNG)
 
-  * Automatically saves content inside the text editor when the DOM window is unfocused
 
-  * Bundled with webpack
+## Questions?
 
-  * Create a service worker with workbox that Caches static assets
+Want to see more of my work? [Github Link](https://github.com/SHD327)
+<br/>
+Want to learn more please contact me at shdesai327@gmail.com
 
-  * The application should use babel in order to use async / await
 
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
+## Links
 
-  * Can be installed as a Progressive Web Application
+* [Github Link](https://github.com/shd327/Text-Editor)
+* [Heroku Link]() 
 
-### Deployment: 32%
+## Resources
 
-* Application deployed to Heroku at live URL with build scripts
+* https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
+* https://developers.google.com/web/tools/lighthouse
 
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
