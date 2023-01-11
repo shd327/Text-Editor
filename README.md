@@ -145,8 +145,9 @@ N/A
 
 ## Screenshots
 
-![image ](./Assets/jate.GIF)
 ![image](./Assets/Capture.PNG)
+![image ](./Assets/jate.GIF)
+
 
 
 ## Questions?
