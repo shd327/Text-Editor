@@ -60,7 +60,7 @@ THEN I should have proper build scripts for a webpack application
 ## Installation
 * Clone the repository using:
 ```
-git clone git@github.com:shd327/Social-Network-API.git
+git clone git@github.com:shd327/Text-Editor.git
 ```
 * Ensure you are in the current working directory
 * Ensure all dependencies are installed as shown below installation instructions are below:
@@ -122,7 +122,7 @@ Want to learn more please contact me at shdesai327@gmail.com
 
 
 ## Links
-* [Github Link](https://github.com/shd327/Social-Network-API/)
+* [Github Link](https://github.com/shd327/Text-Editor/)
 * [Heroku Link](https://fast-woodland-35648.herokuapp.com/) 
 
 
