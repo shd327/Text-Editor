@@ -145,13 +145,13 @@ N/A
 
 ## Screenshots
 
-![](./Assets/Capture.PNG)
+
 ![](./Assets/jate.GIF)
 
 
 
 ## Questions?
-
+![](./Assets/Capture.PNG)
 Want to see more of my work? [Github Link](https://github.com/SHD327)
 <br/>
 Want to learn more please contact me at shdesai327@gmail.com
