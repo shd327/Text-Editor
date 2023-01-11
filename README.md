@@ -147,7 +147,7 @@ N/A
 
 
 ![](./Assets/jate.GIF)
-![](./Assets/Capture.PNG)
+
 
 
 ## Questions?
