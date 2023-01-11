@@ -145,9 +145,8 @@ N/A
 
 ## Screenshots
 
-![image](./Assets/Capture.PNG)
-
-![image](./Assets/jate.GIF)
+![](./Assets/Capture.PNG)
+![](./Assets/jate.GIF)
 
 
 
