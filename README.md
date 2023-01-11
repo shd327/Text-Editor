@@ -7,14 +7,14 @@ This project covers J.A.T.E (ust another text editor). JATE is a text editor tha
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 ## Table of Contents
 1. [ User Story. ](#user_Story)
-2.  [ Acceptance Citeria. ](#acceptance_criteria)
-3.  [ Description. ](#description)
+2. [ Acceptance Citeria. ](#acceptance_criteria)
+3. [ Description. ](#description)
 4. [ Installation. ](#installation)
 5. [ Usage. ](#usage)
 6. [ License. ](#license)
 7. [ Screenshots. ](#screenshots)
 8. [ Questions. ](#questions)
-9.  [ Links. ](#links)
+9. [ Links. ](#links)
 10. [ Resources. ](#resources)
 
 ## User Story
